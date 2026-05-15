@@ -118,5 +118,5 @@ for yr in range(2014, current_year):
 final_df = pd.concat(all_dfs, ignore_index=True)
 print(final_df.head())
 
-outfile = f"data/raw/AEO_{value}_{sector}_{fuel}_{region_abbrv}.csv"
+outfile = f"data/raw/AEO_{value}_{sector}_{fuel}_{region_abbrv}_2014_current.csv"
 final_df.to_csv(outfile, index=False)

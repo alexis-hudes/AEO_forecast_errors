@@ -197,7 +197,7 @@ for filepath in files:
         except ValueError:
             continue
 
-        history = "HISTORIC" if int(year) < int(pub_year) else "PROJECTION"
+        history = "HISTORIC" if int(year)+1 < int(pub_year) else "PROJECTION"
 
         rows.append({
             "period": year,

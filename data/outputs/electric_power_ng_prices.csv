@@ -25,7 +25,7 @@ period,history,scenario,scenarioDescription,tableId,tableName,seriesId,seriesNam
 2012,PROJECTION,ref2010,Reference case,3,Energy Prices by Sector and Source,prce_ene_elep_NA_ng_NA_NA_y08dlrpmmbtu,Energy Prices: Electric Power: Natural Gas,1-0,United States,6.170367,2008 $/mill Btu,2010
 2011,PROJECTION,ref2010,Reference case,3,Energy Prices by Sector and Source,prce_ene_elep_NA_ng_NA_NA_y08dlrpmmbtu,Energy Prices: Electric Power: Natural Gas,1-0,United States,5.821139,2008 $/mill Btu,2010
 2010,PROJECTION,ref2010,Reference case,3,Energy Prices by Sector and Source,prce_ene_elep_NA_ng_NA_NA_y08dlrpmmbtu,Energy Prices: Electric Power: Natural Gas,1-0,United States,4.846521,2008 $/mill Btu,2010
-2009,HISTORIC,ref2010,Reference case,3,Energy Prices by Sector and Source,prce_ene_elep_NA_ng_NA_NA_y08dlrpmmbtu,Energy Prices: Electric Power: Natural Gas,1-0,United States,4.135658,2008 $/mill Btu,2010
+2009,PROJECTION,ref2010,Reference case,3,Energy Prices by Sector and Source,prce_ene_elep_NA_ng_NA_NA_y08dlrpmmbtu,Energy Prices: Electric Power: Natural Gas,1-0,United States,4.135658,2008 $/mill Btu,2010
 2008,HISTORIC,ref2010,Reference case,3,Energy Prices by Sector and Source,prce_ene_elep_NA_ng_NA_NA_y08dlrpmmbtu,Energy Prices: Electric Power: Natural Gas,1-0,United States,9.094496,2008 $/mill Btu,2010
 2007,HISTORIC,ref2010,Reference case,3,Energy Prices by Sector and Source,prce_ene_elep_NA_ng_NA_NA_y08dlrpmmbtu,Energy Prices: Electric Power: Natural Gas,1-0,United States,7.25853,2008 $/mill Btu,2010
 2035,PROJECTION,ref2011,Reference case,3,Energy Prices by Sector and Source,prce_ene_elep_NA_ng_NA_NA_y09dlrpmmbtu,Energy Prices: Electric Power: Natural Gas,1-0,United States,6.804125,2009 $/mill Btu,2011
@@ -53,7 +53,7 @@ period,history,scenario,scenarioDescription,tableId,tableName,seriesId,seriesNam
 2013,PROJECTION,ref2011,Reference case,3,Energy Prices by Sector and Source,prce_ene_elep_NA_ng_NA_NA_y09dlrpmmbtu,Energy Prices: Electric Power: Natural Gas,1-0,United States,4.638232,2009 $/mill Btu,2011
 2012,PROJECTION,ref2011,Reference case,3,Energy Prices by Sector and Source,prce_ene_elep_NA_ng_NA_NA_y09dlrpmmbtu,Energy Prices: Electric Power: Natural Gas,1-0,United States,4.648548,2009 $/mill Btu,2011
 2011,PROJECTION,ref2011,Reference case,3,Energy Prices by Sector and Source,prce_ene_elep_NA_ng_NA_NA_y09dlrpmmbtu,Energy Prices: Electric Power: Natural Gas,1-0,United States,4.718506,2009 $/mill Btu,2011
-2010,HISTORIC,ref2011,Reference case,3,Energy Prices by Sector and Source,prce_ene_elep_NA_ng_NA_NA_y09dlrpmmbtu,Energy Prices: Electric Power: Natural Gas,1-0,United States,5.071375,2009 $/mill Btu,2011
+2010,PROJECTION,ref2011,Reference case,3,Energy Prices by Sector and Source,prce_ene_elep_NA_ng_NA_NA_y09dlrpmmbtu,Energy Prices: Electric Power: Natural Gas,1-0,United States,5.071375,2009 $/mill Btu,2011
 2009,HISTORIC,ref2011,Reference case,3,Energy Prices by Sector and Source,prce_ene_elep_NA_ng_NA_NA_y09dlrpmmbtu,Energy Prices: Electric Power: Natural Gas,1-0,United States,4.819802,2009 $/mill Btu,2011
 2008,HISTORIC,ref2011,Reference case,3,Energy Prices by Sector and Source,prce_ene_elep_NA_ng_NA_NA_y09dlrpmmbtu,Energy Prices: Electric Power: Natural Gas,1-0,United States,9.102598,2009 $/mill Btu,2011
 2035,PROJECTION,ref2012,Reference case,3,Energy Prices by Sector and Source,prce_ene_elep_NA_ng_NA_NA_y10dlrpmmbtu,Energy Prices: Electric Power: Natural Gas,1-0,United States,7.210584,2010 $/mill Btu,2012
@@ -80,7 +80,7 @@ period,history,scenario,scenarioDescription,tableId,tableName,seriesId,seriesNam
 2014,PROJECTION,ref2012,Reference case,3,Energy Prices by Sector and Source,prce_ene_elep_NA_ng_NA_NA_y10dlrpmmbtu,Energy Prices: Electric Power: Natural Gas,1-0,United States,4.389512,2010 $/mill Btu,2012
 2013,PROJECTION,ref2012,Reference case,3,Energy Prices by Sector and Source,prce_ene_elep_NA_ng_NA_NA_y10dlrpmmbtu,Energy Prices: Electric Power: Natural Gas,1-0,United States,4.424342,2010 $/mill Btu,2012
 2012,PROJECTION,ref2012,Reference case,3,Energy Prices by Sector and Source,prce_ene_elep_NA_ng_NA_NA_y10dlrpmmbtu,Energy Prices: Electric Power: Natural Gas,1-0,United States,4.354831,2010 $/mill Btu,2012
-2011,HISTORIC,ref2012,Reference case,3,Energy Prices by Sector and Source,prce_ene_elep_NA_ng_NA_NA_y10dlrpmmbtu,Energy Prices: Electric Power: Natural Gas,1-0,United States,4.664394,2010 $/mill Btu,2012
+2011,PROJECTION,ref2012,Reference case,3,Energy Prices by Sector and Source,prce_ene_elep_NA_ng_NA_NA_y10dlrpmmbtu,Energy Prices: Electric Power: Natural Gas,1-0,United States,4.664394,2010 $/mill Btu,2012
 2010,HISTORIC,ref2012,Reference case,3,Energy Prices by Sector and Source,prce_ene_elep_NA_ng_NA_NA_y10dlrpmmbtu,Energy Prices: Electric Power: Natural Gas,1-0,United States,5.138942,2010 $/mill Btu,2012
 2009,HISTORIC,ref2012,Reference case,3,Energy Prices by Sector and Source,prce_ene_elep_NA_ng_NA_NA_y10dlrpmmbtu,Energy Prices: Electric Power: Natural Gas,1-0,United States,4.853091,2010 $/mill Btu,2012
 2040,PROJECTION,ref2013,Reference case,3,Energy Prices by Sector and Source,prce_ene_elep_NA_ng_NA_NA_y11dlrpmmbtu,Energy Prices: Electric Power: Natural Gas,1-0,United States,8.377783,2011 $/mill Btu,2013
@@ -111,7 +111,7 @@ period,history,scenario,scenarioDescription,tableId,tableName,seriesId,seriesNam
 2015,PROJECTION,ref2013,Reference case,3,Energy Prices by Sector and Source,prce_ene_elep_NA_ng_NA_NA_y11dlrpmmbtu,Energy Prices: Electric Power: Natural Gas,1-0,United States,3.842071,2011 $/mill Btu,2013
 2014,PROJECTION,ref2013,Reference case,3,Energy Prices by Sector and Source,prce_ene_elep_NA_ng_NA_NA_y11dlrpmmbtu,Energy Prices: Electric Power: Natural Gas,1-0,United States,3.758219,2011 $/mill Btu,2013
 2013,PROJECTION,ref2013,Reference case,3,Energy Prices by Sector and Source,prce_ene_elep_NA_ng_NA_NA_y11dlrpmmbtu,Energy Prices: Electric Power: Natural Gas,1-0,United States,3.71553,2011 $/mill Btu,2013
-2012,HISTORIC,ref2013,Reference case,3,Energy Prices by Sector and Source,prce_ene_elep_NA_ng_NA_NA_y11dlrpmmbtu,Energy Prices: Electric Power: Natural Gas,1-0,United States,3.321756,2011 $/mill Btu,2013
+2012,PROJECTION,ref2013,Reference case,3,Energy Prices by Sector and Source,prce_ene_elep_NA_ng_NA_NA_y11dlrpmmbtu,Energy Prices: Electric Power: Natural Gas,1-0,United States,3.321756,2011 $/mill Btu,2013
 2011,HISTORIC,ref2013,Reference case,3,Energy Prices by Sector and Source,prce_ene_elep_NA_ng_NA_NA_y11dlrpmmbtu,Energy Prices: Electric Power: Natural Gas,1-0,United States,4.774714,2011 $/mill Btu,2013
 2010,HISTORIC,ref2013,Reference case,3,Energy Prices by Sector and Source,prce_ene_elep_NA_ng_NA_NA_y11dlrpmmbtu,Energy Prices: Electric Power: Natural Gas,1-0,United States,5.258165,2011 $/mill Btu,2013
 2040,PROJECTION,ref2014,Reference case,3,Energy Prices by Sector and Source,prce_ene_elep_na_ng_na_na_y12dlrpmmbtu,Energy Prices: Electric Power: Natural Gas,1-0,United States,8.158767,2012 $/mill Btu,2014
@@ -141,6 +141,6 @@ period,history,scenario,scenarioDescription,tableId,tableName,seriesId,seriesNam
 2016,PROJECTION,ref2014,Reference case,3,Energy Prices by Sector and Source,prce_ene_elep_na_ng_na_na_y12dlrpmmbtu,Energy Prices: Electric Power: Natural Gas,1-0,United States,4.474802,2012 $/mill Btu,2014
 2015,PROJECTION,ref2014,Reference case,3,Energy Prices by Sector and Source,prce_ene_elep_na_ng_na_na_y12dlrpmmbtu,Energy Prices: Electric Power: Natural Gas,1-0,United States,4.428498,2012 $/mill Btu,2014
 2014,PROJECTION,ref2014,Reference case,3,Energy Prices by Sector and Source,prce_ene_elep_na_ng_na_na_y12dlrpmmbtu,Energy Prices: Electric Power: Natural Gas,1-0,United States,4.469414,2012 $/mill Btu,2014
-2013,HISTORIC,ref2014,Reference case,3,Energy Prices by Sector and Source,prce_ene_elep_na_ng_na_na_y12dlrpmmbtu,Energy Prices: Electric Power: Natural Gas,1-0,United States,4.320632,2012 $/mill Btu,2014
+2013,PROJECTION,ref2014,Reference case,3,Energy Prices by Sector and Source,prce_ene_elep_na_ng_na_na_y12dlrpmmbtu,Energy Prices: Electric Power: Natural Gas,1-0,United States,4.320632,2012 $/mill Btu,2014
 2012,HISTORIC,ref2014,Reference case,3,Energy Prices by Sector and Source,prce_ene_elep_na_ng_na_na_y12dlrpmmbtu,Energy Prices: Electric Power: Natural Gas,1-0,United States,3.437873,2012 $/mill Btu,2014
 2011,HISTORIC,ref2014,Reference case,3,Energy Prices by Sector and Source,prce_ene_elep_na_ng_na_na_y12dlrpmmbtu,Energy Prices: Electric Power: Natural Gas,1-0,United States,4.881901,2012 $/mill Btu,2014

@@ -6,7 +6,9 @@
 /data/raw/*
 /data/interim/*
 /data/model_outputs/*
-!.gitkeep
+!data/raw/.gitkeep
+!data/interim/.gitkeep
+!data/model_outputs/.gitkeep
 
 # =============================================================================
 # Python artifacts

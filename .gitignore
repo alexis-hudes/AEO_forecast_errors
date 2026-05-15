@@ -5,10 +5,10 @@
 # Ignore contents of data folders, but keep folder structure
 /data/raw/*
 /data/interim/*
-/data/model_outputs/*
+/data/outputs/*
 !data/raw/.gitkeep
 !data/interim/.gitkeep
-!data/model_outputs/.gitkeep
+!data/outputs/.gitkeep
 
 # =============================================================================
 # Python artifacts

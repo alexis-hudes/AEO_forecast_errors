@@ -46,7 +46,7 @@ aeo_historic = (
 # find the years that exist in AEO but not in SEDS
 missing_years = set(aeo_historic['period']) - set(seds_observed['period'])
 
-# filter the AEO dataframe to just pull the yers not available in SEDS
+# filter the AEO dataframe to just pull the years not available in SEDS
 aeo_fallback = aeo_historic[aeo_historic['period'].isin(missing_years)]
 
 # combine SEDS and fallback AEO data, use concat to stack vertically

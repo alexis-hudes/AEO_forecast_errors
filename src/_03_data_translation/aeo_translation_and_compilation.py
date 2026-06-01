@@ -32,7 +32,7 @@ OUT_DIR = "data/interim"
 INPUT_FILES = [
     f"{AEO_DIR}/AEO_{value}_{sector_aeo}_{fuel_aeo}_{region_abbrv}_1998_2010.csv",
     f"{AEO_DIR}/AEO_{value}_{sector_aeo}_{fuel_aeo}_{region_abbrv}_2011_2013.csv",
-    f"{AEO_DIR}/AEO_{value}_{sector_aeo}_{fuel_aeo}_{region_abbrv}_2014_current.csv",
+    f"{AEO_DIR}/AEO_{value}_{sector_aeo}_{fuel_aeo}_{region_abbrv}_2014_current.csv"
 ]
 
 # Canonical unit string for the output

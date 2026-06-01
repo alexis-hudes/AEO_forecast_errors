@@ -22,7 +22,7 @@ modules = [
     "src._04_forecast_error_calculation.forecast_error_calculation",
     "src._05_visualizations.forecast_errors_vs_H",
     "src._05_visualizations.projections_historic_time_series",
-    "src._05_visualizations.projection_with_uncertainty_example",
+    "src._05_visualizations.aeo2025_projection_with_uncertainty",
     "src._06_clean_up_repository.delete_processed_data",
     "src._06_clean_up_repository.delete_specific_raw_data"
 ]

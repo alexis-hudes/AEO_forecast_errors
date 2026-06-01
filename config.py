@@ -4,10 +4,10 @@
 ######################################################
 # You need to register for the EIA API to get a key
 # https://www.eia.gov/opendata/
-API_KEY = 'b4mZau2npFizQNxnHhTpsJy8zTq8njsMbDStWfod'
+API_KEY = 'your-key-here'
 
 # What to analyze
-fuel    = "Distillate Fuel"      # Natural Gas | Electricity | Propane | Distillate Fuel
+fuel    = "Natural Gas"      # Natural Gas | Electricity | Propane | Distillate Fuel
 sector  = "Residential"      # Electric Power | Commercial | Residential | Industrial
 region  = "New England"    # United States | New England
 value   = "real"             # real | nom

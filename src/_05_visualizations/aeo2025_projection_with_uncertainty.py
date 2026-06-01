@@ -1,5 +1,10 @@
 '''
 Plot the AEO 2025 projection with the Gaussian density uncertainty bands and historical data
+
+Use the calculated standard deviations out to H = 10 and then hold them constant
+
+This mitigates the effect of sample size decreasing as H increases, 
+which drives down the standard deviation even though uncertainty does not decrease
 '''
 
 import matplotlib.pyplot as plt
@@ -34,7 +39,7 @@ aeo_2025_proj['H'] = range(len(aeo_2025_proj))
 #   - use the empirical std for H <= H_MAX
 #   - hold the std flat at the H_MAX value for any horizon beyond that
 std_lookup = dict(zip(std_df['H'], std_df['std_log_diff']))
-H_MAX = 15
+H_MAX = 10
 def std_for_H(H):
     return std_lookup[H] if H <= H_MAX else std_lookup[H_MAX]
 

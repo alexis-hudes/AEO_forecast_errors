@@ -7,7 +7,7 @@
 API_KEY = 'your-key-here'
 
 # What to analyze
-fuel    = "Natural Gas"      # Natural Gas | Electricity | Propane | Distillate Fuel
+fuel    = "Distillate Fuel"      # Natural Gas | Electricity | Propane | Distillate Fuel
 sector  = "Residential"      # Electric Power | Commercial | Residential | Industrial
 region  = "New England"      # United States | New England
 value   = "real"             # real | nom (not fully set-up to work with nom yet)

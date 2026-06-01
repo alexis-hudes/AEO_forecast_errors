@@ -1,14 +1,14 @@
 """
 Calculate the AEO forecast error as
-stdev_H(log(y_projected)-log(y_observed) for all y_projected and y_observed in that H)
+stdev_H(log(y_projected)-log(y_observed) for all y_projected and y_observed in that H
 
 H is year/time horizon. H=0 is the first year of the projection, H=1 is the second year of the proejction, etc..
 
 Observed values default to SEDS. Where SEDS is missing a year (e.g. residential
-propane, where SEDS only goes back to 2010), we fall back to the HISTORIC rows
+propane, where SEDS only goes back to 2010), fall back to the HISTORIC rows
 carried in the AEO vintages, which are already converted to constant dollars by
-the compilation step. SEDS remains the default because it extends further
-forward (through ~2024) than the AEO historic data (which ends around 2017).
+the compilation step. SEDS remains the default because it generally has spatial coverage
+than the AEO historic
 """
 
 import pandas as pd
@@ -23,13 +23,11 @@ seds_data_path = f"data/interim/SEDS_{fuel_seds}_{sector_seds}_{region_abbrv}_co
 aeo_df = pd.read_csv(aeo_data_path)
 seds_df = pd.read_csv(seds_data_path)
 
-# ---------------------------------------------------------------------------
-# Build the observed-values lookup.
-#
-# SEDS is the default source. Where SEDS lacks a year, fall back to the
-# HISTORIC rows from the AEO vintages (already in constant dollars). Only AEO
-# years that SEDS doesn't cover are pulled in
-# ---------------------------------------------------------------------------
+
+#######################################################################################################
+# Build the observed-values lookup (default to SEDS, pull in AEO HISTORIC when SEDS has gaps)
+#######################################################################################################
+
 seds_observed = (
     seds_df[['period', 'value_converted']]
     .dropna(subset=['value_converted'])
@@ -79,6 +77,10 @@ aeo_df = aeo_df[aeo_df['period'] <= max_observed_year]
 # get list of unique AEO projections included in the dataset
 aeo_unique = aeo_df['scenario'].unique()
 
+#######################################################################################################
+# Calculate the log forecast errors
+#######################################################################################################
+
 forecast_errors = []
 
 for scenario in aeo_unique:
@@ -110,7 +112,9 @@ forecast_errors_df = pd.DataFrame(forecast_errors)
 # save to data/interim to be able to plot
 forecast_errors_df.to_csv(f'data/interim/forecast_errors_{value}_{sector_aeo}_{fuel_aeo}_{region_abbrv}_constant_{calculation_year}.csv')
 
-# calculate the standard deviation of errors for each H across scenarios
+#######################################################################################################
+# Calculate the standard deviation of the errors grouped by time horizon (H)
+#######################################################################################################
 std_by_H = (
     forecast_errors_df
     .groupby('H')['log_diff']

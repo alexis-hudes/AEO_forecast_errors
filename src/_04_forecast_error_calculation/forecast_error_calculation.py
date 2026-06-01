@@ -132,39 +132,3 @@ print(count_by_H)
 
 # save the standard deviations to data/outputs
 std_by_H.to_csv(f'data/outputs/std_{value}_{sector_aeo}_{fuel_aeo}_{region_abbrv}_constant_{calculation_year}.csv')
-
-# ---------------------------------------------------------------------------
-# NP2: median-centered nonparametric EPI
-#
-# Center each horizon's log-error distribution on its own median so the
-# AEO reference case keeps the most probability weight, then store the
-# percentiles of the centered errors. The band is reconstructed at plot
-# time as y = y_proj * exp(-eps_centered), so a high centered error maps
-# to a low actual value. Percentiles are therefore stored as-is; the sign
-# flip happens in the plotting step.
-# ---------------------------------------------------------------------------
-def np2_percentiles(group):
-    m_log = group.median()              # per-H bias
-    centered = group - m_log            # eps_centered, median now at 0
-    return pd.Series({
-        'median_log_diff': m_log,
-        'p2_5':  centered.quantile(0.025),
-        'p50':   centered.quantile(0.50),   # ~0 by construction
-        'p97_5': centered.quantile(0.975),
-        'count': group.count(),
-    })
-
-np2_by_H = (
-    forecast_errors_df
-    .groupby('H')['log_diff']
-    .apply(np2_percentiles)
-    .unstack()
-    .reset_index()
-)
-
-print(np2_by_H)
-
-np2_by_H.to_csv(
-    f'data/outputs/np2_{value}_{sector_aeo}_{fuel_aeo}_{region_abbrv}_constant_{calculation_year}.csv',
-    index=False,
-)

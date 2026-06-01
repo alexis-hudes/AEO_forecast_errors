@@ -1,40 +1,66 @@
+# config.py
 ######################################################
-# 1. API KEY
+# USER SETTINGS — edit these
 ######################################################
 # You need to register for the EIA API to get a key
 # https://www.eia.gov/opendata/
+API_KEY = 'your-key-here'
 
-# uncomment the next line and add your API key in quotes
-# API_KEY = 
+# What to analyze
+fuel    = "Distillate Fuel"      # Natural Gas | Electricity | Propane | Distillate Fuel
+sector  = "Residential"      # Electric Power | Commercial | Residential | Industrial
+region  = "New England"    # United States | New England
+value   = "real"             # real | nom
 
-######################################################
-# 2. Current year
-######################################################
-current_year = 2026
+# Time settings
+current_year     = 2026
+calculation_year = 2020      # dollar-year for constant-$ analysis (1929-present)
+# Note: Kaack, et al. uses 2013 as their calculation year
 
-######################################################
-# 3. Region
-######################################################
-
-region = 'United States' #currently setup to work with 'United States' or 'New England'
-
-if region == 'United States':
-    region_code = '1-0'
-    region_shorthand = 'NA' #for API seriesID
-    region_abbrv = 'US'
-    table_num = 20
-elif region == 'New England':
-    region_code = '1-1'
-    region_shorthand = 'neengl'
-    region_abbrv = 'NE'
-    table_num = 11
 
 ######################################################
-# 3. series
+# LOOKUPS — don't edit unless adding a new option
 ######################################################
-fuel = 'ng'
 
-sector = 'elep'
+FUEL_CODES = {
+    "Natural Gas":     {"aeo": "ng",   "seds": "NG"},
+    "Electricity":     {"aeo": "elc",  "seds": "ES"},
+    "Propane":         {"aeo": "prop", "seds": "PQ"},
+    "Distillate Fuel": {"aeo": "dfo",  "seds": "DF"},
+}
 
-# value can be 'real' or 'nom' for nominal
-value = 'real'
+SECTOR_CODES = {
+    "Electric Power": {"aeo": "elep", "seds": "EI"},
+    "Commercial":     {"aeo": "comm", "seds": "CC"},
+    "Residential":    {"aeo": "resd", "seds": "RC"},
+    "Industrial":     {"aeo": "idal", "seds": "IC"},
+}
+
+REGION_CODES = {
+    "United States": {
+        "code": "1-0", "shorthand": "NA", "abbrv": "US",
+        "table_num": 20, "states": ["US"],
+    },
+    "New England": {
+        "code": "1-1", "shorthand": "neengl", "abbrv": "NE",
+        "table_num": 11, "states": ["MA", "NH", "CT", "VT", "ME", "RI"],
+    },
+}
+
+
+######################################################
+# DERIVED — exported for the rest of the pipeline
+######################################################
+
+_f = FUEL_CODES[fuel]
+_s = SECTOR_CODES[sector]
+_r = REGION_CODES[region]
+
+
+fuel_aeo,   fuel_seds   = _f["aeo"], _f["seds"]
+sector_aeo, sector_seds = _s["aeo"], _s["seds"]
+region_code      = _r["code"]
+region_shorthand = _r["shorthand"]
+region_abbrv     = _r["abbrv"]
+table_num        = _r["table_num"]
+region_states    = _r["states"]

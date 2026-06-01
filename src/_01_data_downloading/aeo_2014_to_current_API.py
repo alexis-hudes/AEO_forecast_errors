@@ -4,20 +4,24 @@ From 2014 onward, AEO data is available through the EIA API.
 This script downloads annual AEO series data across vintages
 and combines the results into a single dataframe.
 
+Note: there was no AEO 2024
+
 API credentials and query parameters are defined in config.py.
 """
 
 import time
 import requests
 import pandas as pd
+import os, sys
+from config import API_KEY, current_year, sector_aeo, fuel_aeo, region_shorthand, value, region_code, region_abbrv
 
-import sys, os
-PROJECT_ROOT = os.path.abspath(
-    os.path.join(os.path.dirname(__file__), "..", "..")
-)
-sys.path.insert(0, PROJECT_ROOT)
-from config import API_KEY, current_year, sector, fuel, region_shorthand, value, region_code, region_abbrv
 
+outfile = f"data/raw/AEO/AEO_{value}_{sector_aeo}_{fuel_aeo}_{region_abbrv}_2014_current.csv"
+
+# Skip download if file already exists
+if os.path.exists(outfile):
+    print(f"File already exists: {outfile}. Skipping download.")
+    sys.exit(0)
 
 session = requests.Session()
 
@@ -26,13 +30,25 @@ all_dfs = []
 # Download loop
 for yr in range(2014, current_year):
 
+    if yr == 2024:
+        continue
+
     url = f"https://api.eia.gov/v2/aeo/{yr}/data/"
+
+    # Handling quirky name changes
+    # 'resd' was 'res' in AEO 2014-2017, 'comm' was 'cmm' for 2014
+    sector_for_api = sector_aeo
+    if sector_aeo == 'resd' and yr <= 2017:
+        sector_for_api = 'res'
+    elif sector_aeo == 'comm' and yr == 2014:
+        sector_for_api = 'cmm'
+    
 
     # Building series ID
     if value == "nom":
 
         current_series = (
-            f"prce_nom_{sector}_NA_{fuel}_NA_{region_shorthand}_ndlrpmbtu"
+            f"prce_nom_{sector_for_api}_NA_{fuel_aeo}_NA_{region_shorthand}_ndlrpmbtu"
         )
 
     elif value == "real":
@@ -40,13 +56,13 @@ for yr in range(2014, current_year):
         if yr == 2014:
             dollar_year = 12
             # old naming convention
-            base = f"prce_ene_{sector}_NA_{fuel}_NA_{region_shorthand}"
+            base = f"prce_ene_{sector_for_api}_NA_{fuel_aeo}_NA_{region_shorthand}"
 
         else:
-            # not sure why they keep this static at 13 from 2015 onward
+            # this is static at 13 from 2015 onward
             dollar_year = 13
             # newer naming convention
-            base = f"prce_real_{sector}_NA_{fuel}_NA_{region_shorthand}"
+            base = f"prce_real_{sector_for_api}_NA_{fuel_aeo}_NA_{region_shorthand}"
 
         current_series = (
             f"{base}_y{dollar_year}dlrpmmbtu"
@@ -118,5 +134,5 @@ for yr in range(2014, current_year):
 final_df = pd.concat(all_dfs, ignore_index=True)
 print(final_df.head())
 
-outfile = f"data/raw/AEO_{value}_{sector}_{fuel}_{region_abbrv}_2014_current.csv"
+os.makedirs(os.path.dirname(outfile), exist_ok=True)
 final_df.to_csv(outfile, index=False)

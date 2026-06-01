@@ -23,11 +23,10 @@ https://www.eia.gov/outlooks/archive/aeo{yr % 100:02d}/supplement/sup_t2t3.xls
 import os
 import time
 import requests
-import pandas as pd
 
 # Configuration
 AEO_YEARS = range(1998, 2011)
-os.makedirs(f"data/raw/aeo_1998_to_2010", exist_ok=True)
+os.makedirs(f"data/raw/AEO/aeo_1998_to_2010", exist_ok=True)
 
 session = requests.Session()
 session.headers.update({"User-Agent": "Mozilla/5.0 (research script)"})
@@ -44,7 +43,7 @@ for yr in AEO_YEARS:
         url = f"https://www.eia.gov/outlooks/archive/aeo{yr % 100:02d}/supplement/sup_t2t3.xls"
 
     # check if file already exists before downloading
-    raw_path = os.path.join(f"data/raw/aeo_1998_to_2010", f"aeo{yr}.xls")
+    raw_path = os.path.join(f"data/raw/AEO/aeo_1998_to_2010", f"aeo{yr}.xls")
     
     if os.path.exists(raw_path):
         print(f"  Already exists, skipping")

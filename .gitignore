@@ -2,13 +2,38 @@
 # Data
 # =============================================================================
 
-# Ignore contents of data folders, but keep folder structure
+# Ignore contents of data folders by default
 /data/raw/*
 /data/interim/*
 /data/outputs/*
-!data/raw/.gitkeep
-!data/interim/.gitkeep
-!data/outputs/.gitkeep
+
+# --- AEO: keep the 2011-2013 manual download (contents and all) ---
+!/data/raw/AEO/
+/data/raw/AEO/*
+!/data/raw/AEO/aeo_2011_2013_manual_download/
+
+# Explicitly exclude the 1998-2010 archive subfolder
+/data/raw/AEO/aeo_1998_to_2010/
+
+# --- FRED: keep folder and contents ---
+!/data/raw/FRED/
+
+# --- SEDS: keep folder but not contents (currently empty) ---
+!/data/raw/SEDS/
+/data/raw/SEDS/*
+!/data/raw/SEDS/.gitkeep
+
+# --- interim/outputs: keep folders but not contents ---
+!/data/interim/.gitkeep
+!/data/outputs/.gitkeep
+
+# =============================================================================
+# Plots
+# =============================================================================
+
+# Keep the folder, ignore the contents
+/plots/*
+!/plots/.gitkeep
 
 # =============================================================================
 # Python artifacts

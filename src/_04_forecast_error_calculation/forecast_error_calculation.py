@@ -1,6 +1,6 @@
 """
 Calculate the AEO forecast error as
-stdev_H(log(y_projected)-log(y_observed) for all y_projected and y_observed in that H
+stdev_H(log(y_projected)-log(y_observed)) for all y_projected and y_observed in that H
 
 H is year/time horizon. H=0 is the first year of the projection, H=1 is the second year of the proejction, etc..
 

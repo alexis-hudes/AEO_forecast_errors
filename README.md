@@ -28,7 +28,7 @@ AEO_forecast_errors/
 └── src/
     ├── _01_data_downloading/        # AEO + SEDS downloaders
     ├── _02_data_processing/         # reformat archive XLS, aggregate SEDS
-    ├── _03_data_translation/        # convert to constant dollars
+    ├── _03_data_transformation/     # convert to constant dollars
     ├── _04_forecast_error_calculation/
     ├── _05_visualizations/          # generate figures into plots/
     └── _06_clean_up_repository/     # clears data/interim/ and analysis-specific raw files

@@ -150,4 +150,4 @@ Kaack, L. H., Apt, J., Morgan, M. G., & McSharry, P. (2017). Empirical predictio
 
 ## Contact
 
-This workflow is a collaboration between Alexis Hudes and Robin Zou, who are both PhD students in the [Sustainable Transitions Lab](https://www.sustainabletransitions.earth/) at Dartmouth College. Feel free to reach out with questions: [alexis.hudes.th@dartmouth.edu](alexis.hudes.th@dartmouth.edu).
+The recreation of this workflow is a collaboration between Alexis Hudes and Robin Zou, who are both PhD students in the [Sustainable Transitions Lab](https://www.sustainabletransitions.earth/) at Dartmouth College. Feel free to reach out with questions: [alexis.hudes.th@dartmouth.edu](alexis.hudes.th@dartmouth.edu).

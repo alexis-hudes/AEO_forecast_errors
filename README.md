@@ -130,7 +130,7 @@ Note: Scripts must be invoked in this way from the project root so that `config`
 
 ## Caching behavior
 
-The downloaders (`aeo_2014_to_current_API`, `seds_1998_to_current_API`, `aeo_1998_2010_web_scrape`) skip if their output file already exists. Reformatting and translation always re-run. To force a fresh download, delete the cached file.
+The downloaders (`aeo_2014_to_current_API`, `seds_1998_to_current_API`, `aeo_1998_2010_web_scrape`) skip if their output file already exists. To force a fresh download, delete the cached file.
 
 The final pipeline step deletes all intermediate files. Comment out the last two entries in `main.py`'s `scripts` list if you want to inspect or call intermediate files.
 

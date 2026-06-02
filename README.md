@@ -4,7 +4,7 @@ A pipeline for calculating historical forecast errors in the U.S. Energy Informa
 
 For each combination of fuel, sector, and region, the pipeline downloads every AEO vintage from 1998 to the present as well as historical observations from the State Energy Data System (SEDS), converts everything to constant dollars, and computes the standard deviation of log forecast errors as a function of forecast horizon (H). Those standard deviations can parameterize Gaussian density intervals to characterize uncertainty around future AEO projections.
 
-## What you get
+## Key outputs
 
 For a single configuration (e.g. natural gas / electric power / United States / 2021 dollars), one run produces:
 
@@ -147,3 +147,7 @@ The `calculation_year` variable is set in `config.py`.
 ## Reference
 
 Kaack, L. H., Apt, J., Morgan, M. G., & McSharry, P. (2017). Empirical prediction intervals improve energy forecasting. *PNAS*, 114(33), 8752–8757. https://doi.org/10.1073/pnas.1619938114
+
+## Contact
+
+This workflow is a collaboration between Alexis Hudes and Robin Zou, who are both PhD students in the [Sustainable Transitions Lab](https://www.sustainabletransitions.earth/) at Dartmouth College. Feel free to reach out with questions: [alexis.hudes.th@dartmouth.edu](alexis.hudes.th@dartmouth.edu).
